@@ -30,11 +30,11 @@ class DirTree:
         tree = parse_dir(self.dir_path)
 
         def map_tree_elem(elem):
-            elem_str = '{shift}[{prefix} {PyP}] {name}'.format(
+            elem_str = '{shift}[{prefix} {PyM}] {name}'.format(
                 shift='\t' * elem[2],
                 prefix=('F' if elem[3] else 'D' ),
                 name=elem[0],
-                PyP=('PyP' if elem[1]==True else '')
+                PyM=('PyM' if elem[1]==True else '')
             )
 
             return elem_str
